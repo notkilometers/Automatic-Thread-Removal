@@ -28,7 +28,9 @@ function removeThread(thread)
 		{
 			if(thread.getElementsByClassName("subject")[0].textContent == threadNames[i])  // if is one of desired threads to remove
 			{
-				thread.style.visibility="hidden"; // changes visibility, doesn't collapse (intentional)
+				
+				thread.style.display="none"; // collapses (default, shows two stacked horizontal lines where missing thread is instead of massive whitespace)
+				//thread.style.visibility="hidden"; // changes visibility, doesn't collapse (intentional, shows where the thread was purged for flavor)
 			}
 		}
 	}
